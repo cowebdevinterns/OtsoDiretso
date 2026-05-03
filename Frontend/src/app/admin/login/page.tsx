@@ -191,6 +191,7 @@ export default function Home() {
       </main>
 
       {/* BACK BUTTON */}
+      <div className="fixed bottom-4 right-4 group">
           <button
             onClick={() => router.push("/")}
             className="fixed bottom-4 right-4 w-12 h-12 rounded-full overflow-hidden border border-gray-400 shadow-md hover:scale-105 transition"
@@ -202,12 +203,18 @@ export default function Home() {
             />
           </button> 
 
+          <div className="absolute bottom-14 right-0 bg-black text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity">
+          Student Login
+        </div>
+        </div>
+
+
           {showForgot && (
             <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
 
               <div className="bg-white p-6 rounded-xl w-full max-w-md">
 
-                <h2 className="text-xl font-bold mb-4">
+                <h2 className="text-xl font-bold mb-4 text-black">
                   Forgot Password
                 </h2>
 
@@ -216,7 +223,7 @@ export default function Home() {
                   placeholder="Enter your email"
                   value={forgotEmail}
                   onChange={(e) => setForgotEmail(e.target.value)}
-                  className="w-full p-3 border rounded mb-3"
+                  className="w-full p-3 border rounded mb-3 text-black"
                 />
 
                 {forgotError && (
@@ -236,7 +243,7 @@ export default function Home() {
                       setForgotError("");
                       setForgotMessage("");
                     }}
-                    className="px-4 py-2 bg-gray-300 rounded"
+                    className="px-4 py-2 bg-red-500 rounded text-black font-bold"
                   >
                     Cancel
                   </button>

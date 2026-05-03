@@ -133,7 +133,7 @@ export default function Home() {
         </h1>
 
         <img
-          src="/tempAvatarIcon.png"
+          src="/capyAvatar.gif"
           alt="Avatar"
           className="w-24 h-24 rounded-full mb-6 self-center"
         />
@@ -210,16 +210,22 @@ export default function Home() {
       </main>
 
       {/* ADMIN BUTTON */}
-      <button
-        onClick={() => router.push("/admin/login")}
-        className="fixed bottom-4 right-4 w-12 h-12 rounded-full overflow-hidden border border-gray-400 shadow-md hover:scale-105 transition"
-      >
-        <img
-          src="/adminSwitch.png"
-          alt="Admin"
-          className="w-full h-full object-cover"
-        />
-      </button>
+      <div className="fixed bottom-4 right-4 group">
+        <button
+          onClick={() => router.push("/admin/login")}
+          className="fixed bottom-4 right-4 w-12 h-12 rounded-full overflow-hidden border border-gray-400 shadow-md hover:scale-105 transition"
+        >
+          <img
+            src="/adminSwitch.png"
+            alt="Admin"
+            className="w-full h-full object-cover"
+          />
+        </button>
+
+        <div className="absolute bottom-14 right-0 bg-black text-white text-xs rounded py-1 px-2 opacity-0 group-hover:opacity-100 transition-opacity">
+          Admin Login
+        </div>
+      </div>
 
       {showForgot && (
         <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50">
