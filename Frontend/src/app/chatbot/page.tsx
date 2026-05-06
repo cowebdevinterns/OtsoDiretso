@@ -67,14 +67,17 @@ export default function ChatbotPage() {
 
       {/* SIDEBAR */}
       <div
-        className={`bg-white shadow-lg transition-all duration-300 overflow-hidden
+        className={`bg-[#faf3dd] shadow-lg transition-all duration-300 overflow-hidden
         ${menuOpen ? "w-64" : "w-0"}`}
       >
         {menuOpen && (
           <div className="p-5 flex flex-col gap-4 h-full">
             
-            {/**Logo natin erps instead na menu */}
-            <h2 className="text-lg font-bold mb-2 text-black">Menu</h2>
+            <img
+              src="/CapyBuddy.png"
+              alt="Avatar"
+              className="w-20 h-19 rounded-full self-center mb-4"
+            />
 
             <button
               onClick={() => setHotlinesOpen(true)}
@@ -159,6 +162,9 @@ export default function ChatbotPage() {
             src="/capyAvatar.gif"
             className="h-24 w-24 rounded-full mb-2"
           />
+          <h1 className="text-2xl font-bold text-black">
+            CapyBuddy
+          </h1>
           <p className="text-sm text-gray-700">
             A safe space to talk and be heard.
           </p>
